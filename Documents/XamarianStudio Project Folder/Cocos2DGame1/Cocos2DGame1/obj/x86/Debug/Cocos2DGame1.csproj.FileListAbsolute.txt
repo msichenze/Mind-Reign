@@ -1,0 +1,44 @@
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\Content\fonts\MarkerFelt-22.xnb
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\Cocos2DGame1.exe
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\Cocos2DGame1.pdb
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\BitMiracle.LibTiff.NET.dll
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\box2d.dll
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\cocos2d-xna.dll
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\ICSharpCode.SharpZipLib.dll
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\Lidgren.Network.dll
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\MonoGame.Framework.dll
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\SharpDX.Direct2D1.dll
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\SharpDX.Direct3D11.dll
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\SharpDX.Direct3D9.dll
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\SharpDX.dll
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\SharpDX.DXGI.dll
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\SharpDX.MediaFoundation.dll
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\SharpDX.RawInput.dll
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\SharpDX.XAudio2.dll
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\SharpDX.XInput.dll
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\zlib.net.dll
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\obj\x86\Debug\Cocos2DGame1.csprojResolveAssemblyReference.cache
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\obj\x86\Debug\Cocos2DGame1.exe
+c:\users\msich_000\documents\visual studio 2013\Projects\Cocos2DGame1\Cocos2DGame1\obj\x86\Debug\Cocos2DGame1.pdb
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\Content\fonts\MarkerFelt-22.xnb
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\Cocos2DGame1.exe
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\Cocos2DGame1.pdb
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\BitMiracle.LibTiff.NET.dll
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\box2d.dll
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\cocos2d-xna.dll
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\Lidgren.Network.dll
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\MonoGame.Framework.dll
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\SharpDX.Direct2D1.dll
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\SharpDX.Direct3D11.dll
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\SharpDX.Direct3D9.dll
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\SharpDX.dll
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\SharpDX.DXGI.dll
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\SharpDX.MediaFoundation.dll
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\SharpDX.RawInput.dll
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\SharpDX.XAudio2.dll
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\SharpDX.XInput.dll
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\zlib.net.dll
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\obj\x86\Debug\Cocos2DGame1.csprojResolveAssemblyReference.cache
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\obj\x86\Debug\Cocos2DGame1.exe
+C:\Users\msich_000\Documents\XmarinStudio Projects\Cocos2DGame1\Cocos2DGame1\obj\x86\Debug\Cocos2DGame1.pdb
