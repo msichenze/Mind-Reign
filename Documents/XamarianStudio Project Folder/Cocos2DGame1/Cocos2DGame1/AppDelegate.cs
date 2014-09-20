@@ -16,8 +16,8 @@ namespace MindRain
         {
             s_pSharedApplication = this;
 
-            preferredWidth = 1024;
-            preferredHeight = 768;
+			preferredWidth = 1910; //1024;
+			preferredHeight = 1045; //768;
             graphics.PreferredBackBufferWidth = preferredWidth;
             graphics.PreferredBackBufferHeight = preferredHeight;
 
@@ -33,11 +33,11 @@ namespace MindRain
         /// <summary>
         /// Implement for initialize OpenGL instance, set source path, etc...
         /// </summary>
-        public override bool InitInstance()
-        {
-            return base.InitInstance();
-        }
-
+//        public override bool InitInstance()
+//        {
+//            return base.InitInstance();
+//        }
+//
         /// <summary>
         ///  Implement CCDirector and CCScene init code here.
         /// </summary>
@@ -57,17 +57,14 @@ namespace MindRain
 
             var resPolicy = CCResolutionPolicy.ExactFit; // This will stretch out your game
 
-            CCDrawManager.SetDesignResolutionSize(preferredWidth,
-                                                  preferredHeight,
-                                                  resPolicy);
-
+			CCDrawManager.SetDesignResolutionSize(preferredWidth, preferredHeight, resPolicy);
             // turn on display FPS
             //pDirector.DisplayStats = true;
 
             // set FPS. the default value is 1.0/60 if you don't call this
             pDirector.AnimationInterval = 1.0 / 60;
 
-            CCScene pScene = IntroLayer.Scene;
+			CCScene pScene = new GameScene();  
 
             pDirector.RunWithScene(pScene);
             return true;

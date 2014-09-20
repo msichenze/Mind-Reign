@@ -4,22 +4,25 @@ using System.Linq;
 using System.Text;
 
 namespace MindRain
-{
+{ 
     class Character
     {
-        public Dictionary<string, float> bonusStatsPropertyDict;
+		public fighterState state;
+		public Dictionary<string, float> bonusStatsPropertyDict = new Dictionary<string, float>();
 
 		public Character(Object characterObj, string fgHitboxesDef, string bonusStats)
 		{
 			//Note: Load bonus Stats into a dictionary
 			LoadBonusStatsFiles(bonusStats, bonusStatsPropertyDict);
 			fighterState state = new fighterState(characterObj.propertyDict, bonusStatsPropertyDict);
+			this.state = state;
 		}
+
 		private void LoadBonusStatsFiles(string bonusStats, Dictionary<string, float> bonusStatsPropertyDict)
 		{
 			//Read the bonusStats of the character into an array
 			//Note: Read AllLines reads in by line all the content on the line
-			string[] bonusS = System.IO.File.ReadAllLines("Content/PropertyFiles/" + bonusStats + ".txt");
+			string[] bonusS = System.IO.File.ReadAllLines("Content/propertyFiles/bonusStats/" + bonusStats + ".txt");
 			foreach (string property in bonusS)
 			{
 				float bonusSVal = 0;
@@ -37,12 +40,13 @@ namespace MindRain
 
 			this.bonusStatsPropertyDict = bonusStatsPropertyDict;
 		}
+
         //Note: figher state sets all the default values to zero and they will be modified when the game is loaded
         // and as the game progresses
         public class fighterState
         {
             //Note: In Game Character values to keep track of below
-            public float damage = 0f;
+            public float healthPercentage = 0f;
             //Note: combo length is number of sequential hits in a row includes cancels
             public int comboLength = 0;
             //Note: chance to tech only applies on teching when getting smashed into somthing
@@ -50,14 +54,17 @@ namespace MindRain
             //there needs to be a chance to tech when being smashed into a wall or ground so a player cannot always tech out of death
             public float chanceToTech = 0f;
 			public float cancelsAvalable = 0f;
+			public float jumpsDone = 0f;
 
 			//Note: Base value of all character stats
 			private float armor = 0f;
 			//Note: How many cancels a character gets in a row
 			private int cancelCount = 0;
-			private float cancelRecharageTime = 0f;
+			private float cancelRechargeTime = 0f;
 			//Note: density is used to determine weight given the gravity of the stage i think
 			private float density = 0f;
+			//Note: restitution  is how much an object bounces when it hits somthing, 1 is conservs all energy and bounces with the same speed as originaly struck with.
+			private float restitution = 0f;
 			//Note: Speed may not be neccisary or may be replaced
 			private float speed = 0f;
 			private float dashSpeed = 0f;
@@ -134,9 +141,9 @@ namespace MindRain
 
 			//Note: each character can only take one ultra into battle but has 3 to choose from (3 is tennative could be more)
 			//Note: Damage for each Ultra
-			private float ultra1 = 0f;
-			private float ultra2 = 0f;
-			private float ultra3 = 0f;
+			private float ultraOne = 0f;
+			private float ultraTwo = 0f;
+			private float ultraThree = 0f;
 
             //Note: Use this constructor to set all the default values of the character
             //from the dictionary created from the object properties file in object
@@ -145,6 +152,7 @@ namespace MindRain
                 instantiateCharacterStats(characterBaseStats);
                 addBonusStats(bonusStats);
             }
+
             private void instantiateCharacterStats(Dictionary<string, float> characterBaseStats)
             {
                 //Note: instantiate base stats here
@@ -156,9 +164,10 @@ namespace MindRain
 				this.armor = characterBaseStats["armor"];
 				//Note: How many cancels a character gets in a row
 				this.cancelCount = (int) characterBaseStats["cancelCount"];
-				this.cancelRecharageTime = characterBaseStats["cancelRechargeTime"];
+				this.cancelRechargeTime = characterBaseStats["cancelRechargeTime"];
 				//Note: density is used to determine weight given the gravity of the stage i think
 				this.density = characterBaseStats["density"];
+				this.restitution = characterBaseStats ["restitution"];
 				//Note: Speed may not be neccisary or may be replaced
 				this.speed = characterBaseStats["speed"];
 				this.dashSpeed = characterBaseStats["dashSpeed"];
@@ -208,10 +217,11 @@ namespace MindRain
 				this.airDownThrow = characterBaseStats["airDownThrow"];
 
 				//Note: each character can only take one ultra into battle but has 3 to choose from
-				this.ultra1 = characterBaseStats["ultra1"];
-				this.ultra2 = characterBaseStats["ultra2"];
-				this.ultra3 = characterBaseStats["ultra3"];
+				this.ultraOne = characterBaseStats["ultraOne"];
+				this.ultraTwo = characterBaseStats["ultraTwo"];
+				this.ultraThree = characterBaseStats["ultraThree"];
             }
+
             private void addBonusStats(Dictionary<string,float> bonusStats)
             {
                 if(bonusStats.Count != 0)
@@ -220,8 +230,10 @@ namespace MindRain
                     //Note: I have not decided what bonus stats should be allowed in game yet
 
                 }
-            }    
+            }
+
         }
         
     }
 }
+	

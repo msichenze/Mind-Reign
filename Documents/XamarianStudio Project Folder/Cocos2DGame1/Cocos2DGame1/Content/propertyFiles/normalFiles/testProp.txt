@@ -1,7 +1,7 @@
 CanMove 1
 armor 1
 cancelCount 1
-cancelRecharageTime 1
+cancelRechargeTime 1
 density 1
 restitution 1
 speed 1

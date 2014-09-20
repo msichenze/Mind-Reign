@@ -18,6 +18,10 @@ namespace MindRain
             //#if MACOS
             //            Content.RootDirectory = "AngryNinjas/Content";
             //#else
+
+			//Window Title
+			this.Window.Title = "MindRain";
+
             Content.RootDirectory = "Content";
             //#endif
             //
@@ -39,6 +43,7 @@ namespace MindRain
             //            CCDirector.SharedDirector.GamePadEnabled = true;
             //            application.GamePadButtonUpdate += new CCGamePadButtonDelegate(application_GamePadButtonUpdate);
             //#endif
+
         }
 
         //#if XBOX || OUYA
@@ -71,7 +76,12 @@ namespace MindRain
                 ProcessBackClick();
             }
 
-            // TODO: Add your update logic here
+            // TODO: Add your update logic here game
+
+			//Note: The stuff bellow is useful for update sprites as they move and such
+			var runningScene = CCDirector.SharedDirector.RunningScene;
+			GameLayer spriteLayer = null;
+			if (runningScene != null) spriteLayer = (GameLayer)runningScene.GetChildByTag(GameScene.gameLayerTag);
 
 
             base.Update(gameTime);
