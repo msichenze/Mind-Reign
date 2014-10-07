@@ -5,15 +5,21 @@ using System.Text;
 
 namespace MindRain
 { 
-    class Character
+    public class Character
     {
 		public fighterState state;
 		public Dictionary<string, float> bonusStatsPropertyDict = new Dictionary<string, float>();
+		public Object characterObj = new Object ();
 
+		public Character()
+		{
+
+		}
 		public Character(Object characterObj, string fgHitboxesDef, string bonusStats)
 		{
 			//Note: Load bonus Stats into a dictionary
 			LoadBonusStatsFiles(bonusStats, bonusStatsPropertyDict);
+			this.characterObj = characterObj;
 			fighterState state = new fighterState(characterObj.propertyDict, bonusStatsPropertyDict);
 			this.state = state;
 		}
@@ -55,31 +61,32 @@ namespace MindRain
             public float chanceToTech = 0f;
 			public float cancelsAvalable = 0f;
 			public float jumpsDone = 0f;
+			public float gravityScale = 0f;
 
 			//Note: Base value of all character stats
-			private float armor = 0f;
+			public float armor = 0f;
 			//Note: How many cancels a character gets in a row
-			private int cancelCount = 0;
-			private float cancelRechargeTime = 0f;
+			public int cancelCount = 0;
+			public float cancelRechargeTime = 0f;
 			//Note: density is used to determine weight given the gravity of the stage i think
-			private float density = 0f;
+			public float density = 0f;
 			//Note: restitution  is how much an object bounces when it hits somthing, 1 is conservs all energy and bounces with the same speed as originaly struck with.
-			private float restitution = 0f;
+			public float restitution = 0f;
 			//Note: Speed may not be neccisary or may be replaced
-			private float speed = 0f;
-			private float dashSpeed = 0f;
-			private float friction = 0f;
+			public float speed = 0f;
+			public float dashSpeed = 0f;
+			public float friction = 0f;
 			//Note: max jump height works per jump
-			private float maxJumpHeight = 0f;
-			private float jumpLaunchSpeed = 0f;
-			private float landingLag = 0f;
+			public float maxJumpHeight = 0f;
+			public float jumpLaunchSpeed = 0f;
+			public float landingLag = 0f;
 			//Note: how many sequental jumps a character can do
-			private int numberOfJumps = 0;
-			private float dodgeLength = 0f;
+			public int numberOfJumps = 0;
+			public float dodgeLength = 0f;
 
             //Note: End of Game state screen values to keep track of
-            public float totalDamageTaken = 0f;
-            public float totalDamageGiven = 0f;
+			public float totalDamageTaken = 0f;
+			public float totalDamageGiven = 0f;
             public int numberOfDeaths = 0;
             public float distanceFlown = 0f;
             public int numberOfSD = 0;
@@ -105,45 +112,45 @@ namespace MindRain
             public bool knockedDown = false;
 
             //Note: Character damage on all attacks total number of attacks 25
-			private float neutralA = 0f;
-			private float neutralB = 0f;
-			private float forwardA = 0f;
-			private float forwardB = 0f;
-			private float upA = 0f;
-			private float upB = 0f;
-			private float downA = 0f;
-			private float downB = 0f;
+			public float neutralA = 0f;
+			public float neutralB = 0f;
+			public float forwardA = 0f;
+			public float forwardB = 0f;
+			public float upA = 0f;
+			public float upB = 0f;
+			public float downA = 0f;
+			public float downB = 0f;
             //Note: charge rage should be in extra damage per milsec
-			private float chargeRate = 0f;
-			private float neutralChargeMinA = 0f;
-			private float neutralChargeMaxA = 0f;
+			public float chargeRate = 0f;
+			public float neutralChargeMinA = 0f;
+			public float neutralChargeMaxA = 0f;
             //Note: neutral charge b is the only b with a charge
-			private float neutralChargeMinB = 0f;
-			private float neutralChargeMaxB = 0f;
-			private float forwardChargeMinA = 0f;
-			private float forwardChargeMaxA = 0f;
-			private float upChargeMinA = 0f;
-			private float upChargeMaxA = 0f;
-			private float downChargeMinA = 0f;
-			private float downChargeMaxA = 0f;
-			private float airNeutralA = 0f;
-			private float airForwardA = 0f;
-			private float airUpA = 0f;
-			private float airDownA = 0f;
+			public float neutralChargeMinB = 0f;
+			public float neutralChargeMaxB = 0f;
+			public float forwardChargeMinA = 0f;
+			public float forwardChargeMaxA = 0f;
+			public float upChargeMinA = 0f;
+			public float upChargeMaxA = 0f;
+			public float downChargeMinA = 0f;
+			public float downChargeMaxA = 0f;
+			public float airNeutralA = 0f;
+			public float airForwardA = 0f;
+			public float airUpA = 0f;
+			public float airDownA = 0f;
 
 			//Note: Throw damage, Midair and grounded 6 in total
-			private float groundForwardThrow = 0f;
-			private float groundUpThrow = 0f;
-			private float groundDownThrow = 0f;
-			private float airForwardThrow = 0f;
-			private float airUpThrow = 0f;
-			private float airDownThrow = 0f;
+			public float groundForwardThrow = 0f;
+			public float groundUpThrow = 0f;
+			public float groundDownThrow = 0f;
+			public float airForwardThrow = 0f;
+			public float airUpThrow = 0f;
+			public float airDownThrow = 0f;
 
 			//Note: each character can only take one ultra into battle but has 3 to choose from (3 is tennative could be more)
 			//Note: Damage for each Ultra
-			private float ultraOne = 0f;
-			private float ultraTwo = 0f;
-			private float ultraThree = 0f;
+			public float ultraOne = 0f;
+			public float ultraTwo = 0f;
+			public float ultraThree = 0f;
 
             //Note: Use this constructor to set all the default values of the character
             //from the dictionary created from the object properties file in object
@@ -171,6 +178,8 @@ namespace MindRain
 				//Note: Speed may not be neccisary or may be replaced
 				this.speed = characterBaseStats["speed"];
 				this.dashSpeed = characterBaseStats["dashSpeed"];
+				this.gravityScale = characterBaseStats["gravityScale"];
+
 				this.friction = characterBaseStats["friction"];
 				//Note: max jump height works per jump
 				this.maxJumpHeight = characterBaseStats["maxJumpHeight"];

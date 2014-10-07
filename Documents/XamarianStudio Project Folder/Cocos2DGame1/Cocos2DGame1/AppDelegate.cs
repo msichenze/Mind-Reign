@@ -62,8 +62,10 @@ namespace MindRain
             //pDirector.DisplayStats = true;
 
             // set FPS. the default value is 1.0/60 if you don't call this
-            pDirector.AnimationInterval = 1.0 / 60;
+            pDirector.AnimationInterval = 1.0 / 200;
 
+			//Note: Initialize a new instance of the input helper
+			Game1.Input = new InputHelper();
 			CCScene pScene = new GameScene();  
 
             pDirector.RunWithScene(pScene);
@@ -76,7 +78,7 @@ namespace MindRain
         public override void ApplicationDidEnterBackground()
         {
             // stop all of the animation actions that are running.
-            CCDirector.SharedDirector.Pause();
+            //CCDirector.SharedDirector.Pause();
 
             // if you use SimpleAudioEngine, your music must be paused
             //CCSimpleAudioEngine.SharedEngine.PauseBackgroundMusic = true;

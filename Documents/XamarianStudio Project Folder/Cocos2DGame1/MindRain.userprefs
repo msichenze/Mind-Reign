@@ -1,14 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Cocos2DGame1\Game1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Cocos2DGame1\GameLayer.cs">
     <Files>
-      <File FileName="Cocos2DGame1\Object.cs" Line="1" Column="1" />
-      <File FileName="Cocos2DGame1\GameLayer.cs" Line="1" Column="1" />
-      <File FileName="Cocos2DGame1\Character.cs" Line="1" Column="1" />
-      <File FileName="Cocos2DGame1\GameScene.cs" Line="1" Column="1" />
-      <File FileName="Cocos2DGame1\BackgroundLayer.cs" Line="1" Column="1" />
-      <File FileName="Cocos2DGame1\AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="Cocos2DGame1\Game1.cs" Line="1" Column="1" />
+      <File FileName="Cocos2DGame1\GameLayer.cs" Line="46" Column="46" />
+      <File FileName="Cocos2DGame1\CharacterAnimations.cs" Line="7" Column="7" />
+      <File FileName="Cocos2DGame1\Object.cs" Line="65" Column="65" />
+      <File FileName="Cocos2DGame1\Player.cs" Line="35" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -11,6 +11,9 @@ namespace MindRain
     public class Game1 : Game
     {
         private readonly GraphicsDeviceManager graphics;
+		public static InputHelper Input;
+		public CCSize screenSize = CCDirector.SharedDirector.WinSize;
+		CollisionDetection collisionlistener = new CollisionDetection();
 
         public Game1()
         {
@@ -32,7 +35,7 @@ namespace MindRain
             //#endif
 
             // Frame rate is 30 fps by default for Windows Phone.
-            TargetElapsedTime = TimeSpan.FromTicks(333333 / 2);
+			TargetElapsedTime = TimeSpan.FromTicks (333333 / 2);
 
             // Extend battery life under lock.
             //InactiveSleepTime = TimeSpan.FromSeconds(1);
@@ -70,18 +73,29 @@ namespace MindRain
 
         protected override void Update(GameTime gameTime)
         {
+			//Note: Updates the state of the input helper
+			Input.Update();
+
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
             {
                 ProcessBackClick();
             }
 
-            // TODO: Add your update logic here game
-
-			//Note: The stuff bellow is useful for update sprites as they move and such
+			//Note: This section of code gets the currently running scene and use it to find the world and update all b2bodys that are contained in that world
 			var runningScene = CCDirector.SharedDirector.RunningScene;
-			GameLayer spriteLayer = null;
-			if (runningScene != null) spriteLayer = (GameLayer)runningScene.GetChildByTag(GameScene.gameLayerTag);
+			GameLayer gameLayer = null;
+			float timeStep = 1/60f;
+
+			if (runningScene != null) 
+			{
+				gameLayer = (GameLayer)runningScene.GetChildByTag (GameScene.gameLayerTag);
+				gameLayer.Update ();
+
+				//Note: the step function does the physics for the world with the bodies in the currently used world
+				//Note: the first input in the function is used to help represent seconds, the second is velocity iterations and lastly position iterations
+				gameLayer.world.Step (timeStep, 8, 3);
+			}
 
 
             base.Update(gameTime);

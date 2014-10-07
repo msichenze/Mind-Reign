@@ -25,7 +25,7 @@ namespace MindRain
 			// Add the background sprite to the layer
 			AddChild(backgroundImage, 1);
 			// setup our color for the background
-			CCLayerColor LayerColor = new CCLayerColor (CCColor4B.White, screenSize.Width, screenSize.Height);
+			CCLayerColor LayerColor = new CCLayerColor (CCColor4B.Blue, screenSize.Width, screenSize.Height);
 			AddChild (LayerColor,0);
 		}
 	}

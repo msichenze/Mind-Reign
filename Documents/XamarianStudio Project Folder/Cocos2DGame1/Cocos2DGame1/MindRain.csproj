@@ -19,6 +19,7 @@
     <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -28,6 +29,7 @@
     <DefineConstants>TRACE;WINDOWS</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Game.ico</ApplicationIcon>
@@ -42,6 +44,11 @@
     <Compile Include="GameLayer.cs" />
     <Compile Include="GameScene.cs" />
     <Compile Include="BackgroundLayer.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="InputHelper.cs" />
+    <Compile Include="GameInterfaceLayer.cs" />
+    <Compile Include="CollisionDetection.cs" />
+    <Compile Include="CharacterAnimations.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="BitMiracle.LibTiff.NET">
@@ -106,6 +113,10 @@
     <None Include="Content\propertyFiles\normalFiles\testProp.txt" />
     <None Include="Content\sprites\Hex.png" />
     <None Include="Content\images\Background.xnb" />
+    <None Include="Content\sprites\Floor.png" />
+    <None Include="Content\propertyFiles\normalFiles\testPropStatic.txt" />
+    <None Include="Content\sprites\spriteSheets\data_files\sketchwalk.plist" />
+    <None Include="Content\sprites\spriteSheets\texture_files\sketchwalk.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\fonts\MarkerFelt-22.xnb">
@@ -125,5 +136,8 @@
     <Folder Include="Content\hitBoxFiles\" />
     <Folder Include="Content\propertyFiles\" />
     <Folder Include="Content\images\" />
+    <Folder Include="Content\sprites\spriteSheets\" />
+    <Folder Include="Content\sprites\spriteSheets\data_files\" />
+    <Folder Include="Content\sprites\spriteSheets\texture_files\" />
   </ItemGroup>
 </Project>
