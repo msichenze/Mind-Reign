@@ -6,7 +6,7 @@
     <ProjectGuid>{C2AA92EF-1C66-4100-B17B-613EA7CB7BCC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Cocos2DGame1</RootNamespace>
+    <RootNamespace>MindRain</RootNamespace>
     <AssemblyName>Cocos2DGame1</AssemblyName>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -19,7 +19,6 @@
     <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -29,26 +28,31 @@
     <DefineConstants>TRACE;WINDOWS</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Game.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AppDelegate.cs" />
-    <Compile Include="Character.cs" />
-    <Compile Include="Game1.cs" />
-    <Compile Include="Object.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GameLayer.cs" />
-    <Compile Include="GameScene.cs" />
-    <Compile Include="BackgroundLayer.cs" />
-    <Compile Include="Player.cs" />
-    <Compile Include="InputHelper.cs" />
-    <Compile Include="GameInterfaceLayer.cs" />
-    <Compile Include="CollisionDetection.cs" />
-    <Compile Include="CharacterAnimations.cs" />
+    <Compile Include="CSharpClasses\LayerAndSceneClasses\BackgroundLayer.cs" />
+    <Compile Include="CSharpClasses\LayerAndSceneClasses\GameInterfaceLayer.cs" />
+    <Compile Include="CSharpClasses\LayerAndSceneClasses\GameLayer.cs" />
+    <Compile Include="CSharpClasses\LayerAndSceneClasses\GameScene.cs" />
+    <Compile Include="CSharpClasses\CameraClasses\Camera.cs" />
+    <Compile Include="CSharpClasses\CollisionDetectionClasses\FightingHBCollisionHandler.cs" />
+    <Compile Include="CSharpClasses\CollisionDetectionClasses\CollisionDetection.cs" />
+    <Compile Include="CSharpClasses\CharacterAndObjectClasses\Character.cs" />
+    <Compile Include="CSharpClasses\CharacterAndObjectClasses\CharacterFightingHitBoxes.cs" />
+    <Compile Include="CSharpClasses\CharacterAndObjectClasses\Object.cs" />
+    <Compile Include="CSharpClasses\PlayerClasses\Player.cs" />
+    <Compile Include="CSharpClasses\InGameActionClasses\Action.cs" />
+    <Compile Include="CSharpClasses\InGameActionClasses\Damaged.cs" />
+    <Compile Include="CSharpClasses\HelperClasses\InputHelper.cs" />
+    <Compile Include="CSharpClasses\CharacterAndObjectClasses\CharacterAnimationClasses\AnimationUseManager.cs" />
+    <Compile Include="CSharpClasses\CharacterAndObjectClasses\CharacterAnimationClasses\CharacterAnimations.cs" />
+    <Compile Include="CSharpClasses\GameSetupClasses\AppDelegate.cs" />
+    <Compile Include="CSharpClasses\GameSetupClasses\Game1.cs" />
+    <Compile Include="CSharpClasses\GameSetupClasses\Program.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="BitMiracle.LibTiff.NET">
@@ -101,22 +105,63 @@
     <Reference Include="zlib.net">
       <HintPath>..\packages\Cocos2D-XNA.WindowsDX.1.3.0.2\lib\net40\zlib.net.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Content\sprites\test.png" />
-    <None Include="Content\hitBoxFiles\testFHB.txt" />
-    <None Include="Content\propertyFiles\bonusStats\testBS.txt" />
-    <None Include="Content\propertyFiles\normalFiles\testProp.txt" />
-    <None Include="Content\sprites\Hex.png" />
-    <None Include="Content\images\Background.xnb" />
-    <None Include="Content\sprites\Floor.png" />
-    <None Include="Content\propertyFiles\normalFiles\testPropStatic.txt" />
-    <None Include="Content\sprites\spriteSheets\data_files\sketchwalk.plist" />
-    <None Include="Content\sprites\spriteSheets\texture_files\sketchwalk.png" />
+    <None Include="bin\WindowsDX\Debug\Content\images\Background.xnb">
+      <Link>Content\images\Background.xnb</Link>
+    </None>
+    <None Include="bin\WindowsDX\Debug\Content\propertyFiles\animationNameSpeed\testCharAnimationNameSpeed.json">
+      <Link>Content\propertyFiles\animationNameSpeed\testCharAnimationNameSpeed.json</Link>
+    </None>
+    <None Include="bin\WindowsDX\Debug\Content\propertyFiles\bonusStats\testBS.txt">
+      <Link>Content\propertyFiles\bonusStats\testBS.txt</Link>
+    </None>
+    <None Include="bin\WindowsDX\Debug\Content\propertyFiles\keyBindings\testKeyBindings.json">
+      <Link>Content\propertyFiles\keyBindings\testKeyBindings.json</Link>
+    </None>
+    <None Include="bin\WindowsDX\Debug\Content\propertyFiles\normalFiles\testProp.txt">
+      <Link>Content\propertyFiles\normalFiles\testProp.txt</Link>
+    </None>
+    <None Include="bin\WindowsDX\Debug\Content\propertyFiles\normalFiles\testPropStatic.txt">
+      <Link>Content\propertyFiles\normalFiles\testPropStatic.txt</Link>
+    </None>
+    <None Include="bin\WindowsDX\Debug\Content\sprites\Floor.png">
+      <Link>Content\sprites\Floor.png</Link>
+    </None>
+    <None Include="bin\WindowsDX\Debug\Content\sprites\Hex.png">
+      <Link>Content\sprites\Hex.png</Link>
+    </None>
+    <None Include="bin\WindowsDX\Debug\Content\sprites\Sprite1.xnb">
+      <Link>Content\sprites\Sprite1.xnb</Link>
+    </None>
+    <None Include="bin\WindowsDX\Debug\Content\sprites\test.png">
+      <Link>Content\sprites\test.png</Link>
+    </None>
+    <None Include="bin\WindowsDX\Debug\Content\sprites\spriteSheets\data_files\sketchRun.plist">
+      <Link>Content\sprites\spriteSheets\data_files\sketchRun.plist</Link>
+    </None>
+    <None Include="bin\WindowsDX\Debug\Content\sprites\spriteSheets\data_files\sketchwalk.plist">
+      <Link>Content\sprites\spriteSheets\data_files\sketchwalk.plist</Link>
+    </None>
+    <None Include="bin\WindowsDX\Debug\Content\sprites\spriteSheets\texture_files\sketchRun.png">
+      <Link>Content\sprites\spriteSheets\texture_files\sketchRun.png</Link>
+    </None>
+    <None Include="bin\WindowsDX\Debug\Content\sprites\spriteSheets\texture_files\sketchwalk.png">
+      <Link>Content\sprites\spriteSheets\texture_files\sketchwalk.png</Link>
+    </None>
+    <None Include="bin\WindowsDX\Debug\Content\hitBoxFiles\HBCharacterNameFiles\testCharacterHitBoxNames.json">
+      <Link>Content\hitBoxFiles\HBCharacterNameFiles\testCharacterHitBoxNames.json</Link>
+    </None>
+    <None Include="bin\WindowsDX\Debug\Content\hitBoxFiles\output.json">
+      <Link>Content\hitBoxFiles\output.json</Link>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\fonts\MarkerFelt-22.xnb">
@@ -132,12 +177,19 @@
   </Target>
   -->
   <ItemGroup>
-    <Folder Include="Content\sprites\" />
     <Folder Include="Content\hitBoxFiles\" />
-    <Folder Include="Content\propertyFiles\" />
     <Folder Include="Content\images\" />
-    <Folder Include="Content\sprites\spriteSheets\" />
-    <Folder Include="Content\sprites\spriteSheets\data_files\" />
-    <Folder Include="Content\sprites\spriteSheets\texture_files\" />
+    <Folder Include="Content\propertyFiles\" />
+    <Folder Include="Content\sprites\" />
+    <Folder Include="CSharpClasses\" />
+    <Folder Include="CSharpClasses\LayerAndSceneClasses\" />
+    <Folder Include="CSharpClasses\CameraClasses\" />
+    <Folder Include="CSharpClasses\CollisionDetectionClasses\" />
+    <Folder Include="CSharpClasses\PlayerClasses\" />
+    <Folder Include="CSharpClasses\InGameActionClasses\" />
+    <Folder Include="CSharpClasses\HelperClasses\" />
+    <Folder Include="CSharpClasses\CharacterAndObjectClasses\CharacterAnimationClasses\" />
+    <Folder Include="CSharpClasses\GameSetupClasses\" />
+    <Folder Include="Content\hitBoxFiles\HBCharacterNameFiles\" />
   </ItemGroup>
 </Project>

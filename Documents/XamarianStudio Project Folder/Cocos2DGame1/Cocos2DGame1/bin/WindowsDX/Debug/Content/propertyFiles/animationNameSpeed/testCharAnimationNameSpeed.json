@@ -1,0 +1,13 @@
+{
+	character: "test",
+	NameSpeed: [
+		{
+			animationName: "Sketch_walk_1column",
+			animationSpeed: 0.08
+		},
+		{
+			animationName: "sketchRun",
+			animationSpeed: 0.001
+		}
+	]
+}

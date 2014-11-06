@@ -42,3 +42,5 @@ C:\Users\msich_000\Documents\XamarianStudio Project Folder\Cocos2DGame1\Cocos2DG
 C:\Users\msich_000\Documents\XamarianStudio Project Folder\Cocos2DGame1\Cocos2DGame1\obj\x86\Debug\MindRain.csprojResolveAssemblyReference.cache
 C:\Users\msich_000\Documents\XamarianStudio Project Folder\Cocos2DGame1\Cocos2DGame1\obj\x86\Debug\Cocos2DGame1.exe
 C:\Users\msich_000\Documents\XamarianStudio Project Folder\Cocos2DGame1\Cocos2DGame1\obj\x86\Debug\Cocos2DGame1.pdb
+C:\Users\msich_000\Documents\XamarianStudio Project Folder\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\Newtonsoft.Json.dll
+C:\Users\msich_000\Documents\XamarianStudio Project Folder\Cocos2DGame1\Cocos2DGame1\bin\WindowsDX\Debug\Newtonsoft.Json.xml

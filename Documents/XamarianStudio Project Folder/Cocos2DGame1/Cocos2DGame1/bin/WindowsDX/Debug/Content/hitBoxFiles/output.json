@@ -1,0 +1,18 @@
+{
+	image: "test",
+	shapes: [
+		{
+			state:"",
+			x:"549",
+			y:"443",
+			w:"258",
+			h:"376",
+			frame:"1",
+			theta:"0",
+			fill:"1",
+			randomId:"0.6317341469693929",
+			selectionHandles:"",
+			draw:"undefined",
+			contains:"undefined"
+		},
+		{"state":"","x":"1837","y":"232","w":"216","h":"286","frame":"2","theta":"0","fill":"2","randomId":"0.6961396194528788","selectionHandles":"","draw":"undefined","contains":"undefined"},{"state":"","x":"3124","y":"270","w":"266","h":"370","frame":"3","theta":"0","fill":"3","randomId":"0.6779405772686005","selectionHandles":"","draw":"undefined","contains":"undefined"},{"state":"","x":"540","y":"1062","w":"216","h":"432","frame":"4","theta":"0","fill":"4","randomId":"0.059037045342847705","selectionHandles":"","draw":"undefined","contains":"undefined"},{"state":"","x":"1836","y":"1051","w":"238","h":"462","frame":"5","theta":"0","fill":"5","randomId":"0.9585177099797875","selectionHandles":"","draw":"undefined","contains":"undefined"},{"state":"","x":"3103","y":"1044","w":"238","h":"448","frame":"6","theta":"0","fill":"6","randomId":"0.8944067237898707","selectionHandles":"","draw":"undefined","contains":"undefined"},{"state":"","x":"553","y":"1789","w":"258","h":"532","frame":"7","theta":"0","fill":"7","randomId":"0.5273603103123605","selectionHandles":"","draw":"undefined","contains":"undefined"},{"state":"","x":"1836","y":"1746","w":"182","h":"426","frame":"8","theta":"0","fill":"8","randomId":"0.6805542672518641","selectionHandles":"","draw":"undefined","contains":"undefined"},{"state":"","x":"3115","y":"1792","w":"224","h":"538","frame":"9","theta":"0","fill":"9","randomId":"0.6908581354655325","selectionHandles":"","draw":"undefined","contains":"undefined"}]}

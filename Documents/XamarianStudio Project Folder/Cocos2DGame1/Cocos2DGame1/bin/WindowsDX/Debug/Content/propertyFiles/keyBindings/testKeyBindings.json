@@ -1,0 +1,12 @@
+{
+	moveLeft: "Left",
+	moveRight:"Right",
+	Jump:"Up",
+	crouch:"Down",
+	primaryAttack:"R",
+	secondaryAttack:"E",
+	grab:"T",
+	shield:"W",
+	dodge:"Q",
+	ultraAttack:"F"
+}
